@@ -3,7 +3,6 @@ using System.Collections;
 
 public class TileData : AbstractTileData
 {
-
     [SerializeField]
     protected bool IsPlaceable = true;
 

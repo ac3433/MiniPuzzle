@@ -6,15 +6,15 @@ public enum Direction
     None, North, East,South,West
 }
 
-public class DirectionMethod
+public static class DirectionExtensions
 {
-    Point north = new Point() { X = 0, Y = 1 };
-    Point south = new Point() { X = 0, Y = -1 };
-    Point east = new Point() { X = 1, Y = 0 };
-    Point west = new Point() { X = -1, Y = 0 };
-    Point none = new Point() { X = 0, Y = 0 };
+    private static Point north = new Point() { X = 0, Y = 1 };
+    private static Point south = new Point() { X = 0, Y = -1 };
+    private static Point east = new Point() { X = 1, Y = 0 };
+    private static Point west = new Point() { X = -1, Y = 0 };
+    private static  Point none = new Point() { X = 0, Y = 0 };
 
-    public Point GetDirectionPoint(Direction dir)
+    public static Point GetDirectionPoint(Direction dir)
     {
         switch (dir)
         {
