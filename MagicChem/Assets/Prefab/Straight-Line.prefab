@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4609211199319150}
   - component: {fileID: 212539597901167770}
+  - component: {fileID: 61431986414915000}
   m_Layer: 0
   m_Name: straight-line
   m_TagString: Untagged
@@ -51,9 +52,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145808948241034}
+  - component: {fileID: 114684087769149970}
+  - component: {fileID: 114032509827345144}
   m_Layer: 0
   m_Name: Straight-Line
-  m_TagString: Untagged
+  m_TagString: CircleNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +102,57 @@ Transform:
   m_Father: {fileID: 4145808948241034}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61431986414915000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1557670655889460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6666666, y: 1.6666666}
+    newSize: {x: 2.5, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6666666, y: 1.6666666}
+  m_EdgeRadius: 0
+--- !u!114 &114032509827345144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742275081116264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda5d1bdcc078ee4484928946d9d41bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _collider: {fileID: 61431986414915000}
+--- !u!114 &114684087769149970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742275081116264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8668852781395bb4285aa804e4bdeb33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _holeLocations: 0200000004000000
+  _lightUpSprite: {fileID: 1144121515826510}
 --- !u!212 &212217960351754398
 SpriteRenderer:
   m_ObjectHideFlags: 1

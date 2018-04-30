@@ -4,9 +4,6 @@ using System.Collections;
 public class TileData : AbstractTileData
 {
     [SerializeField]
-    protected bool IsPlaceable = true;
-
-    [SerializeField]
     private GameObject _hoverSprite;
 
     private GameObject _hoverSpriteExist;

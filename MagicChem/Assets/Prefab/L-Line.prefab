@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906156787493174}
   - component: {fileID: 212575132029841944}
+  - component: {fileID: 61319589135718104}
   m_Layer: 0
   m_Name: L-line
   m_TagString: Untagged
@@ -51,9 +52,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4329819476225604}
+  - component: {fileID: 114713535008726404}
+  - component: {fileID: 114500507784025320}
   m_Layer: 0
   m_Name: L-Line
-  m_TagString: Untagged
+  m_TagString: CircleNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +67,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974835467902002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -99,6 +102,57 @@ Transform:
   m_Father: {fileID: 4329819476225604}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61319589135718104
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647047281738572}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6666666, y: 1.6666666}
+    newSize: {x: 2.5, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6666666, y: 1.6666666}
+  m_EdgeRadius: 0
+--- !u!114 &114500507784025320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974835467902002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8668852781395bb4285aa804e4bdeb33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _holeLocations: 0100000004000000
+  _lightUpSprite: {fileID: 1314006879819548}
+--- !u!114 &114713535008726404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974835467902002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda5d1bdcc078ee4484928946d9d41bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _collider: {fileID: 61319589135718104}
 --- !u!212 &212169467720607810
 SpriteRenderer:
   m_ObjectHideFlags: 1
