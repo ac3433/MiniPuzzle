@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &20680710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 20680711}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20680711
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20680710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.3356457, y: 0.7765946, z: -10.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &91011559
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,12 +438,22 @@ MonoBehaviour:
   _startNodePosition: {fileID: 2123399594}
   _circleNodeSize:
   - Node: {fileID: 1974835467902002, guid: 5f361bc8ebc4e814ab4511279dcabc15, type: 2}
-    InactiveNode: {fileID: 1361915475318226, guid: a2ccb81f6e6369a46a2c156120686659,
-      type: 2}
+    InactiveNode: {fileID: 20680710}
+    Size: 4
+  - Node: {fileID: 1347356407485976, guid: 761e26862013f3d47af29d61d6187f8b, type: 2}
+    InactiveNode: {fileID: 20680710}
+    Size: 4
+  - Node: {fileID: 1196499490304276, guid: 4c3418c706867ea4b8e75327bd35cfea, type: 2}
+    InactiveNode: {fileID: 20680710}
+    Size: 4
+  - Node: {fileID: 1962005493490470, guid: dd19e2934577329479267d484702643f, type: 2}
+    InactiveNode: {fileID: 20680710}
     Size: 4
   - Node: {fileID: 1742275081116264, guid: cad7c4216c9a43e47a135ff4901b6b66, type: 2}
-    InactiveNode: {fileID: 1581441351638070, guid: e9f8e87502a4bcb4da232417d206ea63,
-      type: 2}
+    InactiveNode: {fileID: 20680710}
+    Size: 4
+  - Node: {fileID: 1347356407485976, guid: 761e26862013f3d47af29d61d6187f8b, type: 2}
+    InactiveNode: {fileID: 20680710}
     Size: 4
   _nodeOffset: 1.01
 --- !u!4 &1841195463
@@ -453,7 +491,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123399594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.01, y: 2.03, z: 0}
+  m_LocalPosition: {x: 3.93, y: 5.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

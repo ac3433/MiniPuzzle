@@ -82,6 +82,7 @@ public class CircleData : AbstractTileData
     {
         _lightUp = false;
         _lightUpSprite.SetActive(false);
+
     }
 
     public void TurnLightOn()

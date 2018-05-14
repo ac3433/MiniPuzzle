@@ -220,11 +220,30 @@ public class GridLevelManager : MonoBehaviour {
 
     public GameObject GetCircleData(int x, int y)
     {
-        return _circleNode[x, y];
+        if (x >= 0 && x < _gridSize && y >= 0 && y < _gridSize)
+            return _circleNode[x, y];
+        return null;
     }
 
     public void SetCircleData(GameObject node, Point p)
     {
         _circleNode[p.X, p.Y] = node;
+    }
+
+    public void PrintMap()
+    {
+        string msg = "";
+        for(int i = 0; i < _gridSize + 1; i++)
+        {
+            for(int j = 0; j < _gridSize + 1; j++)
+            {
+                if (_circleNode[j, i] != null)
+                    msg = string.Concat(msg, "1\t");
+                else
+                    msg = string.Concat(msg, "0\t");
+            }
+            msg = string.Concat(msg, "\n");
+        }
+        Debug.Log(msg);
     }
 }

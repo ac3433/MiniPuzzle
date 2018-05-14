@@ -13,6 +13,7 @@ public class MouseInteraction : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     private Vector3 _startPosition;
     private Transform _orignalParent;
     private Vector3 _originalPosition;
+    private float _originalRotation;
     private Transform _startParent;
 
     private Vector2 _startCollider;
@@ -29,6 +30,7 @@ public class MouseInteraction : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         _lockRotation = false;
         _orignalParent = transform.parent;
         _originalPosition = transform.localPosition;
+        _originalRotation = transform.localRotation.eulerAngles.z;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -38,6 +40,7 @@ public class MouseInteraction : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         _startPosition = transform.position;
         _collider.size = new Vector2(0, 0);
         _circleData.TurnLightOff();
+        _circleData.RemoveNextCircleData();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -54,26 +57,27 @@ public class MouseInteraction : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         {
             transform.localPosition = Vector3.zero;
             GridLevelManager.Instance.SetCircleData(gameObject, _circleData.GetPoint());
-            _circleData.CheckSurrounding();
+            
             _lockRotation = true;
         }
-
+        _circleData.CheckSurrounding();
         _collider.size = _startCollider;
         
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (_lockRotation)
-            {
-                transform.Rotate(Vector3.forward, -90);
-                _circleData.RotateClockwise();
-                _circleData.RemoveNextCircleData();
-                _circleData.CheckSurrounding();
-            }
-        }
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    if (_lockRotation)
+        //    {
+        //        transform.Rotate(Vector3.forward, -90);
+        //        _circleData.RotateClockwise();
+        //        _circleData.RemoveNextCircleData();
+        //        _circleData.CheckSurrounding();
+        //        GridLevelManager.Instance.PrintMap();
+        //    }
+        //}
 
         if(Input.GetMouseButtonUp(1))
         {
@@ -87,6 +91,7 @@ public class MouseInteraction : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         transform.parent = _orignalParent;
         transform.localPosition = _originalPosition;
         transform.localRotation = Quaternion.identity;
+        transform.Rotate(Vector3.forward, _originalRotation);
         _circleData.RemoveNextCircleData();
         SetPoint(null);
     }
